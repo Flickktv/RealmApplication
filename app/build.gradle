@@ -1,17 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'io.realm.kotlin'
+    id 'kotlin-kapt'
+    id 'realm-android'
 }
 
 android {
-    namespace 'com.example.realmapplication'
-    compileSdk 33
+    compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.realmapplication"
-        minSdk 26
-        targetSdk 33
+        applicationId "com.example.realmappliacation"
+        minSdk 23
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -51,12 +51,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test:rules:1.4.0'
 
-    implementation 'io.realm.kotlin:library-base:1.8.0' // Add to use local realm (no sync)
-    implementation 'io.realm.kotlin:library-sync:1.8.0'// Add to use Device Sync
-
     // Koin Core features
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
-    // Koin Test features
+// Koin Test features
     testImplementation "io.insert-koin:koin-test:$koin_version"
 }
